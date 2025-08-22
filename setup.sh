@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# BIM Speckle Viewer Setup Script
+echo \"🚀 Setting up BIM Speckle Viewer...\"\n\n# Create necessary directories\necho \"📁 Creating directories...\"\nmkdir -p uploads/models\nmkdir -p uploads/metadata\nmkdir -p logs\n\n# Install server dependencies\necho \"📦 Installing server dependencies...\"\nnpm install\n\n# Install client dependencies\necho \"📦 Installing client dependencies...\"\ncd client\nnpm install\ncd ..\n\n# Copy environment file if it doesn't exist\nif [ ! -f .env ]; then\n    echo \"⚙️ Creating environment file...\"\n    cp .env.example .env\n    echo \"✅ Environment file created. Please update .env with your configuration.\"\nfi\n\necho \"✨ Setup complete!\"\necho \"\"\necho \"🎯 Next steps:\"\necho \"1. Update .env file with your configuration\"\necho \"2. Run 'npm run dev' to start development servers\"\necho \"3. Open http://localhost:3000 in your browser\"\necho \"\"\necho \"📚 For more information, see README.md\"
