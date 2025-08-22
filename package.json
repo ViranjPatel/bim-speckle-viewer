@@ -1,0 +1,46 @@
+{
+  "name": "bim-speckle-viewer",
+  "version": "1.0.0",
+  "description": "Professional BIM viewer application with Speckle integration",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-server": "npm install",
+    "setup": "npm run install-server && npm run install-client",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "compression": "^1.7.4",
+    "uuid": "^9.0.0",
+    "fs-extra": "^11.1.1",
+    "mime-types": "^2.1.35",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "BIM",
+    "Speckle",
+    "3D Viewer",
+    "CAD",
+    "Architecture",
+    "Engineering"
+  ],
+  "author": "Professional BIM Developer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
